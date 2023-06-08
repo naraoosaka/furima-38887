@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ipXEB0bfnsL_7aycotiD" name="ページ1">
-        <mxGraphModel dx="573" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="709" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -15,7 +15,7 @@
                 <mxCell id="8" value="itemsテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="840" y="80" width="300" height="190" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="items_name &#10;category_id &#10;situation_id &#10;delivery_fee_id &#10;area_id &#10;spendday_id &#10;price &#10;items_explain &#10;user " style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="8">
+                <mxCell id="9" value="items_name &#10;category_id &#10;situation_id &#10;delivery_fee_id &#10;prefecture_id &#10;spendday_id &#10;price &#10;items_explain &#10;user " style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="8">
                     <mxGeometry y="26" width="300" height="164" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;exitX=1.011;exitY=0.644;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="9">

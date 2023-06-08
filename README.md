@@ -7,12 +7,12 @@
 | Column                | Type   | Options     |
 | ------------------    | ------ | ----------- |
 | nickname              | string | null: false |
-| email                 | string | null: false |
-| encrypted_password    | string | null: false |
+| email                 | string | null: false,unique: true|
+| encrypted_password    | string | null: false|
 | family_name           | string | null: false |
 | name                  | string | null: false |
 | family_name_kana     | string | null: false |
-| name_kana            | string | null: false ,unique: true|
+| name_kana            | string | null: false |
 | birthday              | date | null: false |
 
 
@@ -64,7 +64,7 @@
 | category_id           | integer | null: false |
 | situation_id          | integer | null: false |
 | delivery_fee_id       | integer | null: false |
-| area_id               | integer | null: false |
+| prefecture_id               | integer | null: false |
 | spendday_id               | integer | null: false |
 | price                 | integer | null: false |
 | items_explain         | text  | null: false |
