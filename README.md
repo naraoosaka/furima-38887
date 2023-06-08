@@ -9,12 +9,18 @@
 | nickname              | string | null: false |
 | email                 | string | null: false |
 | encrypted_password    | string | null: false |
+| family_name           | string | null: false |
+| name                  | string | null: false |
+| family_name(kana)     | string | null: false |
+| name(kana)            | string | null: false |
+| birthday              | integer | null: false |
+
 
 
 ### Association
 
-- has_many :items
-- has_many :orders
+- has_many :item
+- has_many :order
 
 
 
@@ -22,14 +28,13 @@
 
 | Column     | Type       | Options     |
 | ------     | ------     | ----------- |
-| name       | string     | null: false |
-| credit     | text       | null: false |
-| users      | references | null: false, foreign_key: true |
+| item      | references | null: false, foreign_key: true |
+| user      | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :items
-- belongs_to :users
+- belongs_to :item
+- belongs_to :user
 - has_one : delivery
 
 
@@ -42,30 +47,30 @@
 | prefecture     | string | null: false |
 | city           | string | null: false |
 | address        | string | null: false |
-| build-name     | string | null: false |
+| build_name     | string | null: false |
 | tel            | string | null: false |
-| orders         | references | null: false, foreign_key: true |
+| order         | references | null: false, foreign_key: true |
 
 
 ### Association
 
-- belongs_to :orders
+- belongs_to :order
 
 ## items テーブル
 
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| items-name         | string | null: false |
-| category           | string | null: false |
-| situation          | string | null: false |
-| delivery-fee       | string | null: false |
-| area               | string | null: false |
-| days               | string | null: false |
-| price              | string | null: false |
-| items-explain      | string | null: false |
-| users              | references | null: false, foreign_key: true |
+| Column                | Type    | Options     |
+| ---------------   --- | ------  | ----------- |
+| items_name            | string  | null: false |
+| category_id           | integer | null: false |
+| situation_id          | integer | null: false |
+| delivery-fee_id       | integer | null: false |
+| area_id               | integer | null: false |
+| days_id               | integer | null: false |
+| price                 | integer | null: false |
+| items_explain         | string  | null: false |
+| user                  | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :items
-- has_one :orders
+- belongs_to :item
+- has_one :order
