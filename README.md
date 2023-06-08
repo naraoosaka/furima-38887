@@ -11,16 +11,16 @@
 | encrypted_password    | string | null: false |
 | family_name           | string | null: false |
 | name                  | string | null: false |
-| family_name(kana)     | string | null: false |
-| name(kana)            | string | null: false |
-| birthday              | integer | null: false |
+| family_name_kana     | string | null: false |
+| name_kana            | string | null: false ,unique: true|
+| birthday              | date | null: false |
 
 
 
 ### Association
 
-- has_many :item
-- has_many :order
+- has_many :items
+- has_many :orders
 
 
 
@@ -43,11 +43,11 @@
 
 | Column         | Type       | Options                        |
 | -------        | ---------- | ------------------------------ |
-| post-number    | string | null: false |
-| prefecture     | string | null: false |
+| post_number    | string | null: false |
+| prefecture_id    | integer | null: false |
 | city           | string | null: false |
 | address        | string | null: false |
-| build_name     | string | null: false |
+| build_name     | string | 
 | tel            | string | null: false |
 | order         | references | null: false, foreign_key: true |
 
@@ -63,14 +63,14 @@
 | items_name            | string  | null: false |
 | category_id           | integer | null: false |
 | situation_id          | integer | null: false |
-| delivery-fee_id       | integer | null: false |
+| delivery_fee_id       | integer | null: false |
 | area_id               | integer | null: false |
-| days_id               | integer | null: false |
+| spendday_id               | integer | null: false |
 | price                 | integer | null: false |
-| items_explain         | string  | null: false |
+| items_explain         | text  | null: false |
 | user                  | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :item
+- belongs_to :user
 - has_one :order
