@@ -60,14 +60,14 @@
 
 | Column                | Type    | Options     |
 | ---------------   --- | ------  | ----------- |
-| items_name            | string  | null: false |
+| item_name            | string  | null: false |
 | category_id           | integer | null: false |
 | situation_id          | integer | null: false |
 | delivery_fee_id       | integer | null: false |
 | prefecture_id               | integer | null: false |
 | spendday_id               | integer | null: false |
 | price                 | integer | null: false |
-| items_explain         | text  | null: false |
+| item_explain         | text  | null: false |
 | user                  | references | null: false, foreign_key: true |
 
 ### Association
